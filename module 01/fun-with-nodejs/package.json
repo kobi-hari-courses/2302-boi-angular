@@ -1,0 +1,19 @@
+{
+  "name": "fun-with-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc index.ts"
+  },
+  "author": "kobi hari",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "mathjs": "^11.5.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
