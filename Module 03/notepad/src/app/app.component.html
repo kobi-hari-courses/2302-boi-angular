@@ -1,12 +1,28 @@
 <div class="colors-area">
-  Colors!
+  <app-string-selector
+    [options]="colors"
+    [selectedOption]="selectedColor"
+    (selection)="setColor($event)"
+  ></app-string-selector>
 </div>
 <div class="fonts-area">
-  Fonts!
+  <app-string-selector
+    [options]="fonts"
+    [selectedOption]="selectedFont"
+    (selection)="setFont($event)"
+  ></app-string-selector>
 </div>
 <div class="sizes-area">
-  Sizes!
+  <app-string-selector
+    [options]="sizes"
+    [selectedOption]="selectedSize"
+    (selection)="setSize($event)"
+  ></app-string-selector>
 </div>
 <div class="text-area">
-  <textarea></textarea>
+  <textarea
+    [style.color]="selectedColor"
+    [style.font-size]="selectedSize"
+    [style.font-family]="selectedFont"
+  ></textarea>
 </div>

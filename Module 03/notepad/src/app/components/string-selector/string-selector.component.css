@@ -1,0 +1,19 @@
+.item {
+    border: 1px solid lightgray;
+    padding: 4px;
+    margin: 4px 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.item:hover {
+    background-color: rgb(237, 237, 237);
+    transform: scale(1.1);
+}
+
+.item.chosen {
+    background-color: rgb(187, 215, 228);
+}

@@ -1,6 +1,6 @@
 :host {
     display: grid;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -11,7 +11,7 @@
 }
 
 div {
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     border-radius: 10px;
     margin: 4px;
     overflow: hidden;
