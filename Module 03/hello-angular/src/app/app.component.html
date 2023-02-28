@@ -1,0 +1,11 @@
+<input #mySearchBox type="search" 
+  [value]="keyword" 
+  (input)="setKeyword(mySearchBox.value)" [disabled]="isBusy">
+<button (click)="search()" [disabled]="isBusy">Go</button>
+<img *ngIf="isBusy" src="https://icon-library.com/images/spinner-icon-gif/spinner-icon-gif-25.jpg">
+
+<div *ngFor="let item of results; let i = index; let l = last " 
+  class="result-item" 
+  [class.lo-acharon]="!l">
+  {{i+1}}. {{item}}
+</div>
