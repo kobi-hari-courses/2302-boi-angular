@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { StringSelectorComponent } from './components/string-selector/string-selector.component';
+import { XyzModule } from './xyz/xyz.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StringSelectorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, 
+    XyzModule
   ],
   providers: [],
   bootstrap: [AppComponent]

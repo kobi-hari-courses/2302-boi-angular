@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-string-selector',
+  selector: 'sha-string-selector',
   templateUrl: './string-selector.component.html',
   styleUrls: ['./string-selector.component.css']
 })

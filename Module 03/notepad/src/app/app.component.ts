@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { add } from './shared/utils/math';
 
 @Component({
   selector: 'app-root',
