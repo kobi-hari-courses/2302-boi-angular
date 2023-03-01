@@ -1,0 +1,7 @@
+<button (click)="go()">GO!</button>
+
+<div *ngIf="isPromiseRuninng">
+    <input type="number" #op1>
+    <button (click)="resolver(op1.valueAsNumber)">Complete Promise</button>
+    <button (click)="rejecter('Error')">Reject Promise></button>
+</div>
