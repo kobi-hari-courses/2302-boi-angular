@@ -3,11 +3,16 @@
 |     |     |
 | --- | --- |
 | [Fun With TS](./fun-with-ts/) | Introduction to the Typescript in NodeJs environment | 
-| [Fun with Angular]()
-
-
+| [Fun with Angular](./fun-with-angular/) | Bare bones angular application |
 
 ### Typescript introduction
+* How to declare a type for a variable
+* Declaring function return type
+* Defining arrays
+* Defining Tuples
+* Defining Narrowed Object types
+* Defining function signature types
+* Using the `let` keyword
 * Defining Classes
 * Declaring constructors and initializing fields in the constructor signature
 * private, public and protected fields
@@ -16,11 +21,13 @@
 * Union Types
 * Cross Types
 * the `type` alias
+* We saw how to build **Modular** typescript projects by defining typescript modules
+  * defining exportable identifiers using the `export` keyword
+  * defining imported identifiers using the `import` keyword
 
-### How Tsc
+### How to Tsc
 * We have created ts file and compiled it with TSC and run it with Node
 * We saw how to use the file `tsconfig` to configure the typescript compiler
-* We saw how to use the file `launch.json` to configure the vscode debugger and allow us to debug in vs code.
 
 ### Angular from way above
 * We talked again about SPA and the role of client application, UI Server and Data Server
@@ -52,27 +59,3 @@
 * We saw that an angular component is a new "Html Tag" with its own looks and behavior
     - The behavior is written in typescript 
     - The looks are defined in html and CSS
-
-### MVVM
-* We understood the evolution that lead to the `Model View View-Model` paradigm
-* We learned the role of each part of the pattern
-* We understood that a component is a pair of view and view model
-* We saw how to create an angular application while thinking "mvvm"
-* We wrote a simple search application
-* We learned about the concept of **Directive** and understood that there are 2 types of them
-    - Element directive - is put on an element and changes its behavior
-    - Structural directive - is put on an element and can modify the structure of the HTML DOM
-* We were introduced to the directives:
-    - `*ngIf`
-    - `*ngFor`
-    - disabled
-* We learned how to wire interactivity using angular events
-    - for example `(click) = "doSomething()"`
-* We learned about the concept of data binding and saw that there are 4 types of bindings
-    - `{{value}}` - Text interpolation. For element content only
-    - `[directive]="value"` - input binding - for directives and inputs
-    - `(event)="action"` - event binding - for events
-    - `*directive="whatever"` - for structural directive, each with its own syntax
-
-
-
