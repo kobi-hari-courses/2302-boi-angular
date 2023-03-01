@@ -1,0 +1,7 @@
+<span>service: {{serviceId}}</span>
+<span>wrong: {{wrongId}} </span>
+<input type="number" #opa>
++
+<input type="number" #opb>
+<button (click)="add(opa.valueAsNumber, opb.valueAsNumber)">=</button>
+{{result}}
