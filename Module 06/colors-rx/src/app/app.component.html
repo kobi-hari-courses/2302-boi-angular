@@ -1,0 +1,10 @@
+<div class="toolbar">
+    <h3>Colors Search</h3>
+    <input type="search" #searchBox (input)="search$.next(searchBox.value)">    
+</div>
+
+<div class="results">
+    <div *ngFor="let item of results$ | async" [style.background]="item.code">
+        {{item.displayName}}
+    </div>
+</div>
