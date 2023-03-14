@@ -1,1 +1,4 @@
-<app-current-question></app-current-question>
+<app-progress></app-progress>
+<app-current-question *ngIf="!(isDone$ | async)"></app-current-question>
+<app-quiz-done *ngIf="(isDone$ | async)"></app-quiz-done>
+<button (click)="reset()">Reset</button>

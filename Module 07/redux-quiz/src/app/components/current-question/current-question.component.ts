@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 import { Question } from 'src/app/models/question.model';
-import { currentQuestion } from 'src/app/redux/quiz.selectors';
+import { QuizActions, QuizSelectors } from 'src/app/redux';
 
 @Component({
   selector: 'app-current-question',
@@ -16,7 +16,12 @@ export class CurrentQuestionComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.currentQuestion$ = this.store.select(currentQuestion);
+    this.currentQuestion$ = this.store.select(QuizSelectors.currentQuestion);
+  }
+
+  selectAnswer(value: number) {
+    const action = QuizActions.answerCurrentQuestion({index: value});
+    this.store.dispatch(action);
   }
 
 }

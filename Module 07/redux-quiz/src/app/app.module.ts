@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { QUIZ_REDUCER } from './redux/quiz.reducer';
 import { QUIZ_FEATURE_KEY } from './redux/quiz.state';
 import { CurrentQuestionComponent } from './components/current-question/current-question.component';
+import { ProgressComponent } from './components/progress/progress.component';
+import { QuizDoneComponent } from './components/quiz-done/quiz-done.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CurrentQuestionComponent
+    CurrentQuestionComponent,
+    ProgressComponent,
+    QuizDoneComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+<ng-container *ngIf="vm$ | async as vm">
+    <ng-container *ngFor="let item of vm.items; let i = index; let last = last">
+        <div class="item" [class.empty]="item.status === 'Empty'" [class.correct]="item.status === 'Correct'"
+            [class.wrong]="item.status === 'Wrong'">
+            {{i + 1}}
+        </div>
+        <div class="seperator" *ngIf="!last">
+
+        </div>
+
+    </ng-container>
+</ng-container>

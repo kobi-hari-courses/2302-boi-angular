@@ -1,6 +1,8 @@
-<div *ngIf="currentQuestion$ | async as question">
+<ng-container *ngIf="currentQuestion$ | async as question">
     <h1>{{question.caption}}</h1>
     <ul>
-        <li *ngFor="let answer of question.answers; let i = index">{{answer}}</li>
+        <li *ngFor="let answer of question.answers; let i = index"
+            (click)="selectAnswer(i)"
+        >{{answer}}</li>
     </ul>
-</div>
+</ng-container>

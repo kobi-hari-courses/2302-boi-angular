@@ -1,0 +1,33 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.item {
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.item.correct {
+    background-color: lightgreen;
+}
+
+div.item.wrong {
+    background-color: salmon;
+}
+
+div.item.empty {
+    opacity: 0.6;
+}
+
+div.seperator {
+    height: 1px;
+    flex: 1;
+    background: gray;
+}
