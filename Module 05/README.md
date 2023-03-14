@@ -1,4 +1,4 @@
-## Module 04 - RxJS, Http and Pipes
+## Module 05 - RxJS, Http and Pipes
 ### Projects:
 |     |     |
 | --- | --- |
