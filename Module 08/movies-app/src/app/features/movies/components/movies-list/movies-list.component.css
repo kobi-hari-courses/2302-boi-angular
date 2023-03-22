@@ -10,6 +10,10 @@
     user-select: none;
 }
 
+.movie-item.chosen {
+    background-color: rgba(120, 178, 198, 0.693);;
+}
+
 .movie-item:hover {
     background-color: rgba(173, 216, 230, 0.693);
 }

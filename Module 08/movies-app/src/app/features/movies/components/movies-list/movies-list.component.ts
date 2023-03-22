@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { map, Observable } from 'rxjs';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -10,13 +11,18 @@ import { DataService } from 'src/app/services/data.service';
 export class MoviesListComponent implements OnInit {
 
   movieCaption$!: Promise<string[]>;
+  movieId$!: Observable<number | undefined>;
 
   constructor(
     private dataService: DataService, 
-    private router: Router) { }
+    private router: Router, 
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.movieCaption$ = this.dataService.getMovieCaptions();
+    this.movieId$ = this.route.url.pipe(
+      map(_ => Number(this.route.snapshot.firstChild?.params['id']))
+    )
   }
 
   goToMovie(index: number) {
