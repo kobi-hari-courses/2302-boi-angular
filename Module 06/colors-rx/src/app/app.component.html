@@ -1,6 +1,7 @@
 <div class="toolbar">
     <h3>Colors Search</h3>
-    <input type="search" #searchBox (input)="search$.next(searchBox.value)">    
+    <input type="search" #searchBox (input)="search$.next(searchBox.value)">   
+    <span class="spinner" *ngIf="isBusy$ | async"></span> 
 </div>
 
 <div class="results">

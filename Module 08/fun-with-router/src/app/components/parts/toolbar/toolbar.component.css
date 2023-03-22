@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    flex-direction: row;    
+    background: lightgray;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 4px;
+}
+
+a.i-am-here {
+    background: gray;
+    color: white;
+}

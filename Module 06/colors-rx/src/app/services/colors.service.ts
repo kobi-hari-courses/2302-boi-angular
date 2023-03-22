@@ -24,11 +24,18 @@ export class ColorsService {
       .filter(clr => clr.displayName.toLowerCase().includes(name));
   }
 
-  search(keyword: string): Color[] {    
+  private _delay(millis: number): Promise<void> {
+    return new Promise((res) => setTimeout(res, millis));
+  }
+
+  async search(keyword: string): Promise<Color[]> {    
     console.log('searching for ', keyword);
+
+    await this._delay(3000);
 
     if (!keyword) return [];
 
+    console.log('completed search for ', keyword);
     return this._colorsWithName(keyword);
   }
 

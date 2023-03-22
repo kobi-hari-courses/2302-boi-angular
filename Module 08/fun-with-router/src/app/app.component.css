@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1;    
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
