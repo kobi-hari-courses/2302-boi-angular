@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    background-color: lightgray;
+    padding: 10px;
+    border: 1px solid black;
+
+}
+
+.field {
+    margin: 4px;
+}
+
+label {
+    width: 120px;
+    display: inline-block;
+    font-size: 0.8em;
+}

@@ -18,3 +18,15 @@ a.here {
     color: white;
     border-bottom-color: rgb(31, 56, 88);
 }
+
+hr {
+    flex-grow: 1;
+    border: none;
+    border-right: 1px solid gray;
+    height: 20px;
+    margin: 0px 10px;
+}
+
+span {
+    margin-right: 10px;
+}

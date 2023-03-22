@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthService, UserType } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  userType$!: Observable<UserType>;
+
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
+    this.userType$ = this.auth.userType();
   }
 
 }

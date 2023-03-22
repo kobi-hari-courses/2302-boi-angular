@@ -6,14 +6,15 @@ import { MovieDetailsComponent } from './components/pages/movie-details/movie-de
 import { MovieEditComponent } from './components/pages/movie-edit/movie-edit.component';
 import { MoviesListComponent } from './components/pages/movies-list/movies-list.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
-  { path: 'movies/:id/edit', component: MovieEditComponent}, 
+  { path: 'movies/:id/edit', component: MovieEditComponent, canActivate: [AuthGuard]}, 
   { path: 'movies/:id', component: MovieDetailsComponent}, 
   { path: 'movies', component: MoviesListComponent},
-  { path: 'acount', component: AccountComponent}, 
+  { path: 'account', component: AccountComponent}, 
   { path: '**', component: NotFoundComponent}
 
 ];
