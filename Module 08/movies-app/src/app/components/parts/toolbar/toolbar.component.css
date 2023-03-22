@@ -1,0 +1,20 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(161, 213, 196);
+}
+
+
+a {
+    padding: 4px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+a.here {
+    background-color: rgb(103, 135, 125);
+    color: white;
+    border-bottom-color: rgb(31, 56, 88);
+}

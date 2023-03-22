@@ -1,0 +1,50 @@
+:host {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: auto 1fr;
+}
+
+.toolbar {
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+h1 {
+    grid-row: 2;
+    grid-column: 1 / -1;
+}
+
+p {
+    grid-column: 1;
+}
+
+img {
+    grid-column: 2;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    object-position: top left;
+}
+
+.toolbar > button {
+    outline: none;
+    border: none;
+    background-color: navy;
+    color: white;
+    margin: 4px;
+    padding: 0px 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toolbar > button:disabled {
+    opacity: 0.5;
+    background-color: gray;
+    pointer-events: none;
+}
+
+
+
+.toolbar > button:hover {
+    background-color: rgb(107, 107, 142);
+}

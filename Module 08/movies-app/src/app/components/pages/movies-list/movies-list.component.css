@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-item {
+    margin: 4px;
+    border: 1px solid lightblue;
+    cursor: pointer;
+    user-select: none;
+}
+
+.movie-item:hover {
+    background-color: rgba(173, 216, 230, 0.693);
+}
+
+.movie-item > span:nth-child(1) {
+    background: lightblue;
+    display: inline-block;
+    width: 30px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.movie-item > span {
+    padding: 0px 4px;
+}

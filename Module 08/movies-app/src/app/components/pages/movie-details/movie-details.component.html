@@ -1,0 +1,10 @@
+<ng-container *ngIf="(movie$ | async) as movie">
+    <div class="toolbar">
+        <button [disabled]="movie.id <= 1" (click)="goPrev()"> Prev </button>
+        <button (click)="goEdit()"> Edit </button>
+        <button [disabled]="movie.id >= moviesCount" (click)="goNext()"> Next </button>
+    </div>
+    <h1>{{movie.caption}}</h1>
+    <p>{{movie.description}}</p>
+    <img [src]="movie.poster">
+</ng-container>

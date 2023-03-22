@@ -1,0 +1,7 @@
+<ng-container *ngIf="(movieCaption$ | async) as movies">
+    <div class="movie-item" *ngFor="let caption of movies; let i = index"
+        (click)="goToMovie(i)"
+    >
+        <span>{{i + 1}}</span> <span>{{caption}}</span>
+    </div>
+</ng-container>
