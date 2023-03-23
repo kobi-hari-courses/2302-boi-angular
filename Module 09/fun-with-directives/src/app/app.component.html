@@ -1,7 +1,20 @@
 <h1 underline>Hello World</h1>
-<h2 highlight [color]="myFavoriteColor" class="x">The title is {{title}}</h2>
+<h2 #headerTwo="marker" highlight [color]="myFavoriteColor" class="x">The title is {{title}}</h2>
+
+<span>The h2 was clicked {{headerTwo.clickCount}} times</span>
 
 <h3 underline="blue" title="bla bla" aria-details="this is a header">Today we will talk about directives</h3>
+
+
+<div class="ball-container" followMouse #coord="mouse" [style.--x]="coord.x" [style.--y]="coord.y">
+  <div class="ball" [style.top]="coord.y" [style.left]="coord.x"></div>
+</div>
+
+<h3>Coordinates = x:{{coord.x}} y: {{coord.y}}</h3>
+
+<img src="https://www.shutterstock.com/image-photo/sunset-sun-clouds-on-blue-260nw-1724058607.jpg">
+
+<app-blank #xyz [underline]="myFavoriteColor"></app-blank>
 
 
 <ul>
@@ -13,6 +26,7 @@
   <li >Outputs</li>
 </ul>
 
+<button>Hello World</button>
 
 <input #ourInput type="text">
 <input type="search">

@@ -1,11 +1,12 @@
 import { Directive, ElementRef, EventEmitter, HostBinding, HostListener, Input, Output, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[highlight]'
+  selector: '[highlight]', 
+  exportAs: 'marker'
 })
 export class HighlightDirective {
 
-  private clickCount = 0;
+  public clickCount = 0;
 
   private _color: string = 'lime';
 

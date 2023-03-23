@@ -1,0 +1,23 @@
+.ball-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: lightgray;
+
+    --kobi: green;
+    --x: 10px;
+    --y: 10px;
+    box-shadow: var(--x) var(--y) 20px 0px var(--kobi);
+
+}
+
+.ball {
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}

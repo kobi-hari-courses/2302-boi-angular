@@ -14,4 +14,8 @@ export class AppComponent {
     console.log('The li highlight vanished, its color was', value)
   }
 
+
+  constructor() {
+    setTimeout(() => this.myFavoriteColor = 'green', 5000);
+  }
 }
