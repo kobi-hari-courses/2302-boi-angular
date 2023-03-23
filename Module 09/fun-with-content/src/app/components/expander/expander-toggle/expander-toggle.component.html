@@ -1,0 +1,12 @@
+<ng-container *ngIf="!parentExpander">
+    <ng-content></ng-content>
+</ng-container>
+
+<ng-container *ngIf="parentExpander as parent">
+    <ng-container *ngIf="parent.isOpen">
+        <ng-content select="[expander-on]"></ng-content>
+    </ng-container>
+    <ng-container *ngIf="!parent.isOpen">
+        <ng-content select="[expander-off]"></ng-content>
+    </ng-container>
+</ng-container>

@@ -12,3 +12,13 @@ button {
     color: green;
     border: 1px solid green;
 }
+
+
+.special {
+    --expander-header-background: yellow;
+}
+
+.special:hover {
+    --expander-header-background: orange;
+
+}

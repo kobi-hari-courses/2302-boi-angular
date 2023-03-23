@@ -1,5 +1,14 @@
+<ng-template #templ1 let-item="item">
+  <span [style.color]="item">{{item}}</span>
+</ng-template>
+<ng-template #templ2 let-item="item">
+  <span [style.font-family]="item">{{item}}</span>
+</ng-template>
+
+
 <div class="colors-area">
   <sha-string-selector
+    [itemTemplate]="templ1"
     [options]="colors"
     [selectedOption]="selectedColor"
     (selection)="setColor($event)"
@@ -7,6 +16,7 @@
 </div>
 <div class="fonts-area">
   <sha-string-selector
+    [itemTemplate]="templ2"
     [options]="fonts"
     [selectedOption]="selectedFont"
     (selection)="setFont($event)"

@@ -1,0 +1,16 @@
+<h3>{{title}}</h3>
+
+<ng-template #templ1 let-clr="color" let-mispar="value">
+  <h1 [style.color]="clr">Hello World</h1>
+  <h2>How are you?</h2>
+  <h3>The value is: {{mispar}}</h3>
+</ng-template>
+
+<ng-template #templ2>
+  <a href="www.google.com">Google</a>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="templ1; context: {color: 'red', value: 42}"></ng-container>
+<ng-container *ngTemplateOutlet="templ1; context: {color: 'green', value: 30}"></ng-container>
+<ng-container *ngTemplateOutlet="templ1; context: {color: 'blue', value: 60}"></ng-container>
+<ng-container *ngTemplateOutlet="templ1; context: {color: 'magenta', value: 100}"></ng-container>

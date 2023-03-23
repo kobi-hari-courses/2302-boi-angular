@@ -12,7 +12,6 @@ export class ExpanderComponent implements OnInit {
   @ContentChild(ExpanderToggleDirective)
   expanderToggle: ExpanderToggleDirective | undefined = undefined;
 
-
   toggle() {
     this.isOpen = !this.isOpen;
   }

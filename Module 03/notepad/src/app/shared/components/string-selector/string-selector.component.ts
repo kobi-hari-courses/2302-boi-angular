@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'sha-string-selector',
@@ -6,6 +6,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./string-selector.component.css']
 })
 export class StringSelectorComponent {
+  @Input()
+  itemTemplate: TemplateRef<any> | null = null;
+
   @Input()
   options: string[] = [];
 
