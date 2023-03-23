@@ -8,3 +8,6 @@
 * [Module 05 - Reactive X basics](./Module%2005/README.md)
 * [Module 06 - RxJS Operators](./Module%2006/README.md)
 * [Module 07 - Redux using NgRx](./Module%2007/README.md)
+* [Module 08 - Routing](./Module%2008/README.md)
+* [Module 09 - Directives](./Module%2009/README.md)
+

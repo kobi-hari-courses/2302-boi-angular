@@ -1,0 +1,24 @@
+<h1 underline>Hello World</h1>
+<h2 highlight [color]="myFavoriteColor" class="x">The title is {{title}}</h2>
+
+<h3 underline="blue" title="bla bla" aria-details="this is a header">Today we will talk about directives</h3>
+
+
+<ul>
+  <li highlight color="yellow">How to create directives</li>
+  <li class="x y">Use the Renderer</li>
+  <li highlight (vanished)="whenLiVanished($event)">Use Host Binding</li>
+  <li class="y">Use Host Listener</li>
+  <li highlight>Inputs</li>
+  <li >Outputs</li>
+</ul>
+
+
+<input #ourInput type="text">
+<input type="search">
+<input type="number">
+<button (click)="theSpan.innerText = ourInput.value">Click me</button>
+<h1>Our text is <span #theSpan></span></h1>
+
+
+
