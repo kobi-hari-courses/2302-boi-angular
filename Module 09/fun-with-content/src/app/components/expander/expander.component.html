@@ -1,0 +1,22 @@
+<div class="area header-area">
+  <ng-content select="[expander-header]"></ng-content>
+</div>
+
+<div class="area content-area">
+  <ng-container *ngIf="isOpen">
+    <ng-content></ng-content>
+  </ng-container>
+</div>
+
+<div class="area button-area">
+  <ng-container *ngIf="expanderToggle !== undefined">
+    <ng-content select="button[expander-toggle]"
+    ></ng-content>
+  </ng-container>
+  <ng-container *ngIf="expanderToggle == undefined">
+    <button (click)="toggle()">
+      <span *ngIf="isOpen">-</span>
+      <span *ngIf="!isOpen">+</span>
+    </button>
+  </ng-container>
+</div>

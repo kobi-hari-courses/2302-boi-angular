@@ -1,0 +1,14 @@
+ul {
+    color: green;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+button {
+    background: lime;
+    color: green;
+    border: 1px solid green;
+}
